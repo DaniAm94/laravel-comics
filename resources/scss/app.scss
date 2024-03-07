@@ -1,1 +1,9 @@
-@import '~bootstrap/scss/bootstrap';
+// @import '~bootstrap/scss/bootstrap';
+
+@use "colors";
+@use 'generics';
+@use 'utilities';
+@use 'reset';
+@use 'mixins';
+@use 'header';
+@use 'footer';
