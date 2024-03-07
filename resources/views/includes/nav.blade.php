@@ -2,11 +2,14 @@
     <div class="container">
         <nav>
             <ul>
-                <li v-for="(link, i) in links" :key="i">
-                    <a href="#">
-                        <img class="icon" :src="" :alt="link.text">
-                    </a>
-                </li>
+                @foreach (config('nav') as $item)
+                    <li>
+                        <a href="#">
+                            <img class="icon" src="{{ asset('images') . '/' . $item['img'] }}" :alt="link.text">
+                            {{ $item['text'] }}
+                        </a>
+                    </li>
+                @endforeach
             </ul>
         </nav>
     </div>
