@@ -14,14 +14,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
-});
+    $title = 'home';
+    return view('home', compact('title'));
+})->name('home');
 Route::get('/comics', function () {
-    return view('comics');
-});
+    $title = 'comics';
+    return view('comics', compact('title'));
+})->name('comics');
 Route::get('/characters', function () {
-    return view('characters');
-});
+    $title = 'comics';
+    return view('characters', compact('title'));
+})->name('characters');
 Route::get('/movies', function () {
-    return view('movies');
-});
+    $title = 'movies';
+    return view('movies', compact('title'));
+})->name('movies');
