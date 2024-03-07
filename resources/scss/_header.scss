@@ -26,6 +26,8 @@ header {
         display: block;
         line-height: 130px;
         height: 130px;
+        display: flex;
+        align-items: center;
     }
 
     a:hover,
@@ -34,7 +36,7 @@ header {
         position: relative;
     }
 
-    a:hover::after,
+    a:not(.header-logo):hover::after,
 
     a.active::after {
         content: '';
@@ -44,6 +46,10 @@ header {
         left: 0;
         bottom: 0;
         background-color: $dc-blue;
+    }
+
+    .header-logo:hover {
+        transform: scale(1.1);
     }
 
 }
