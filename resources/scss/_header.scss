@@ -1,9 +1,9 @@
 @use 'colors' as *;
 @use 'mixins' as *;
 
-header {
+header#main-header {
     height: 130px;
-    color: white;
+    background-color: white;
 
     .container {
         @include flex('', 'between');
