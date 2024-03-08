@@ -6,37 +6,12 @@
         </a>
         <nav>
             <ul>
-                <li>
-                    <a class="{{ Route::is('characters') ? 'active' : '' }}"
-                        href="{{ route('characters') }}">CHARACTERS</a>
-                </li>
-                <li>
-                    <a class="{{ Route::is('comics') ? 'active' : '' }}" href="{{ route('comics') }}">COMICS</a>
-                </li>
-                <li>
-                    <a class="{{ Route::is('movies') ? 'active' : '' }}" href="{{ route('movies') }}">MOVIES</a>
-                </li>
-                <li>
-                    <a href="#">TV</a>
-                </li>
-                <li>
-                    <a href="#">GAMES</a>
-                </li>
-                <li>
-                    <a href="#">COLLECTIBLES</a>
-                </li>
-                <li>
-                    <a href="#">VIDEOS</a>
-                </li>
-                <li>
-                    <a href="#">FANS</a>
-                </li>
-                <li>
-                    <a href="#">NEWS</a>
-                </li>
-                <li>
-                    <a href="#">SHOP</a>
-                </li>
+                @foreach (config('header') as $item)
+                    <li>
+                        <a href="{{ route("{$item['text']}") }}"
+                            class="{{ Route::is("{$item['text']}") ? 'active' : '' }}"><?= strtoupper($item['text']) ?></a>
+                    </li>
+                @endforeach
             </ul>
         </nav>
     </div>
