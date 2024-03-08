@@ -5,7 +5,7 @@
                 @foreach (config('nav') as $item)
                     <li>
                         <a href="#">
-                            <img class="icon" src="{{ asset('images') . '/' . $item['img'] }}" :alt="link.text">
+                            <img class="icon" src="{{ asset("images/{$item['img']}") }}" alt="<?= $item['text'] ?>">
                             {{ $item['text'] }}
                         </a>
                     </li>
