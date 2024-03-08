@@ -1,4 +1,4 @@
-<header>
+<header id="main-header">
     <div class="container">
 
         <a class="header-logo" href="{{ route('home') }}">

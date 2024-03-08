@@ -20,8 +20,13 @@ Route::get('/', function () {
 
 Route::get('/comics', function () {
     $title = 'comics';
-    return view('comics', compact('title'));
+    return view('comics/index', compact('title'));
 })->name('comics');
+
+Route::get('/comics/{index}', function ($index) {
+    $comics = config('comics');
+    return view('comics.show', ['comic' => $comics[$index]]);
+})->name('comic');
 
 Route::get('/characters', function () {
     $title = 'comics';

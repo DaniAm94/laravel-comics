@@ -1,0 +1,54 @@
+@use 'colors' as *;
+@use 'mixins' as *;
+
+#show {
+    background-color: white;
+    color: hsl(208.62deg 53.72% 23.73%);
+
+    header.section-header {
+        background-color: $dc-blue;
+        height: 70px;
+        position: relative;
+
+        .container {
+            height: 100%;
+            padding: 0;
+        }
+
+        .prod-card {
+            position: absolute;
+            bottom: 10px;
+
+            .top-label,
+            .bottom-label {
+                position: absolute;
+                color: white;
+                background-color: hsl(202.15deg 61.9% 58.82%);
+                text-transform: uppercase;
+                text-align: center;
+                padding: 3px 5px;
+            }
+
+            .top-label {
+                top: 2px;
+                left: 12px;
+            }
+
+            .bottom-label {
+                bottom: 12px;
+                left: 12px;
+                right: 12px;
+            }
+
+            figure {
+                border: 2px solid white;
+            }
+
+        }
+
+    }
+
+    .container {
+        padding-top: 30px;
+    }
+}
