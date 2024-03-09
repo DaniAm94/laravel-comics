@@ -8,6 +8,9 @@
     <title>{{ env('APP_NAME') }}</title>
     <link rel="icon" href="{{ asset('images/favicon.ico') }}" type="images/ico">
     @vite('resources/js/app.js')
+
+    {{-- CDNS --}}
+    @yield('cdns')
 </head>
 
 <body>
