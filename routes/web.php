@@ -24,6 +24,8 @@ Route::get('/comics', function () {
 })->name('comics');
 
 Route::get('/comics/{index}', function ($index) {
+    //Se l'index non rientra tra i possibili indici dell'array di comics allora visualizza la pagina 404 not found
+    if (!is_numeric($index) || $index < 0 || $index >= count(config('comics'))) abort(404);
     $comics = config('comics');
     return view('comics.show', ['comic' => $comics[$index]]);
 })->name('comic');
